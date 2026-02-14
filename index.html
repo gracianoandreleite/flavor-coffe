@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor & Coffee - Café Especial e Experiências Únicas</title>
+    <meta name="description" content="Flavor & Coffee - Café artesanal de alta qualidade, ambiente acolhedor e experiências memoráveis. Aberto todos os dias.">
+    <meta name="keywords" content="cafeteria, café especial, café artesanal, Luanda, café gourmet">
+    <meta name="author" content="Flavor & Coffee">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS para animações -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-900 text-white font-inter overflow-x-hidden leading-relaxed">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/95 transition-all duration-300" id="home" >
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4 sm:p-6">
+            <a href="#Principal" class="text-xl sm:text-2xl font-bold font-playfair flex items-center gap-2 hover:text-orange-400 transition-colors" aria-label="Ir para a página inicial do Flavor & Coffee">
+                <span class="hidden sm:inline">Flavor & Coffee</span>
+                <span class="sm:hidden">Flavor</span>
+            </a>
+            
+            <nav>
+                <ul class="hidden md:flex gap-6 lg:gap-8">
+                    <li><a href="#Principal" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Sobre</a></li>
+                    <li><a href="#sobre" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Sobre</a></li>
+                    <li><a href="#menu" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Menu</a></li>
+                    <li><a href="#galeria" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Galeria</a></li>
+                    <li><a href="#localizacao" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Localização</a></li>
+                    <li><a href="#contato" class="nav-link relative text-sm font-medium hover:text-orange-400 transition-colors">Contato</a></li>
+                </ul>
+                
+                <!-- Mobile menu toggle -->
+                <button id="nav-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Alternar menu móvel" aria-expanded="false">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </button>
+            </nav>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="nav-menu" class="bg-gray-900 fixed top-0 left-0 w-full h-full bg-gray-900/98 backdrop-blur-lg transform -translate-x-full flex flex-col justify-center items-center gap-8 transition-transform duration-300 md:hidden">
+            <button id="nav-close" class="absolute top-6 right-6 text-2xl" aria-label="Fechar menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#principal" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Sobre</a>
+            <a href="#sobre" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Sobre</a>
+            <a href="#menu" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Menu</a>
+            <a href="#galeria" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Galeria</a>
+            <a href="#localizacao" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Localização</a>
+            <a href="#contato" class="text-2xl font-semibold hover:text-orange-400 transition-colors nav-link-mobile">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('assets/images/fundo/fundo-2.jpg');">
+        <div class="text-center max-w-4xl px-4 sm:px-6" data-aos="fade-up" data-aos-duration="1000">
+            <span class="bg-yellow-700 inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full font-medium text-sm mb-6 animate-pulse">
+                <i class="fas fa-clock"></i>
+                Aberto todos os dias
+            </span>
+            
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-playfair mb-6 leading-tight">
+                <span class="text-yellow-700 block mb-2">Flavor & Coffee</span>
+                Desperte seus sentidos com café excepcional
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Grãos selecionados com paixão, preparados para oferecer um sabor único e momentos inesquecíveis. Venha viver essa experiência!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/244947641774" target="_blank" rel="noopener noreferrer" class="bg-yellow-700 inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <i class="fab fa-whatsapp"></i>
+                    Peça agora via WhatsApp
+                </a>
+                <a href="#menu" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                    <i class="fas fa-utensils"></i>
+                    Ver menu completo
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#sobre" class="text-white hover:text-orange-400 transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="bg-gray-900">
+        
+        <!-- Sobre -->
+        <section id="sobre" class="py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <h2 class="text-3xl sm:text-4xl font-bold font-playfair mb-6 text-orange-400">Nossa História</h2>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            No coração da cidade, o Flavor & Coffee nasceu da paixão por café especial e do desejo de criar momentos memoráveis. Cada xícara conta uma história de dedicação e excelência.
+                        </p>
+                        <p class="text-gray-300 mb-8 leading-relaxed">
+                            Selecionamos os melhores grãos de café do mundo, torrados com precisão para realçar seus sabores únicos. Nossa equipe de baristas apaixonados está pronta para oferecer uma experiência sensorial incomparável.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-400 mb-2">5+</div>
+                                <div class="text-sm text-gray-400">Anos de experiência</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-400 mb-2">50+</div>
+                                <div class="text-sm text-gray-400">Tipos de café</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" class="relative">
+                        <img src="assets/images/produtos/card-13.jpg" alt="Interior acolhedor da cafeteria Flavor & Coffee" class="rounded-lg shadow-2xl w-full h-80 object-cover">
+                        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-500 rounded-full opacity-20"></div>
+                        <div class="absolute -top-6 -right-6 w-16 h-16 bg-orange-400 rounded-full opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu" class="py-16 sm:py-20 lg:py-24 bg-gray-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl sm:text-4xl font-bold font-playfair mb-4 text-orange-400">Nosso Menu</h2>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        De cafés especiais a deliciosos acompanhamentos, cada item é preparado com amor e dedicação.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cafés Especiais -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-orange-400 text-3xl mb-4">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 font-playfair">Cafés Especiais</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex justify-between">
+                                <span>Espresso</span>
+                                <span class="text-orange-400 font-semibold">AOA 250</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Cappuccino</span>
+                                <span class="text-orange-400 font-semibold">AOA 350</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Latte</span>
+                                <span class="text-orange-400 font-semibold">AOA 400</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Mocha</span>
+                                <span class="text-orange-400 font-semibold">AOA 450</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Cold Brew</span>
+                                <span class="text-orange-400 font-semibold">AOA 300</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Bebidas Quentes -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-orange-400 text-3xl mb-4">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 font-playfair">Bebidas Quentes</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex justify-between">
+                                <span>Chá Verde</span>
+                                <span class="text-orange-400 font-semibold">AOA 200</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Chá de Ervas</span>
+                                <span class="text-orange-400 font-semibold">AOA 200</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Chocolate Quente</span>
+                                <span class="text-orange-400 font-semibold">AOA 350</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Chai Latte</span>
+                                <span class="text-orange-400 font-semibold">AOA 400</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Matcha Latte</span>
+                                <span class="text-orange-400 font-semibold">AOA 500</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Lanches & Doces -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-orange-400 text-3xl mb-4">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 font-playfair">Lanches & Doces</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex justify-between">
+                                <span>Croissant</span>
+                                <span class="text-orange-400 font-semibold">AOA 300</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Muffin</span>
+                                <span class="text-orange-400 font-semibold">AOA 250</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Brownie</span>
+                                <span class="text-orange-400 font-semibold">AOA 350</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Bolo de Cenoura</span>
+                                <span class="text-orange-400 font-semibold">AOA 400</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sanduíche Natural</span>
+                                <span class="text-orange-400 font-semibold">AOA 500</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+                    <p class="text-gray-400 mb-4">Preços sujeitos a alteração sem aviso prévio</p>
+                    <a href="https://wa.me/244900000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                        Faça seu pedido
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="py-16 sm:py-20 lg:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl sm:text-4xl font-bold font-playfair mb-4 text-orange-400">Nossa Galeria</h2>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        Conheça nosso espaço acolhedor e os momentos especiais que criamos para você.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/images/produtos/card-2.jpg" alt="Interior da cafeteria" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Ambiente Acolhedor</h4>
+                                <p class="text-sm text-gray-300">Perfeito para encontros e momentos relaxantes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/images/produtos/card-3.jpg" alt="Café sendo preparado" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Arte do Café</h4>
+                                <p class="text-sm text-gray-300">Cada xícara é preparada com dedicação</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <img src="assets/images/produtos/card-5.jpg" alt="Barista preparando café" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Baristas Profissionais</h4>
+                                <p class="text-sm text-gray-300">Especialistas em café de qualidade</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                        <img src="assets/images/produtos/card-6.jpg" alt="Delícias da cafeteria" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Delícias Caseiras</h4>
+                                <p class="text-sm text-gray-300">Bolos e lanches preparados diariamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <img src="assets/images/produtos/card-7.jpg" alt="Clientes desfrutando" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Momentos Especiais</h4>
+                                <p class="text-sm text-gray-300">Criando memórias com cada visita</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="600">
+                        <img src="assets/images/produtos/card-7.jpg" alt="Variedade de cafés" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h4 class="font-bold text-lg mb-1">Variedade Única</h4>
+                                <p class="text-sm text-gray-300">Mais de 50 tipos de cafés especiais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section id="localizacao" class="py-16 sm:py-20 lg:py-24 bg-gray-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <h2 class="text-3xl sm:text-4xl font-bold font-playfair mb-4 text-orange-400">Encontre-nos</h2>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        Estamos localizados em um ponto estratégico da cidade, fácil de encontrar e com estacionamento disponível.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-xl font-bold mb-4 font-playfair text-orange-400">Informações de Localização</h3>
+                            <div class="space-y-4 text-gray-300">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-map-marker-alt text-orange-400 mt-1"></i>
+                                    <div>
+                                        <strong>Endereço:</strong><br>
+                                        Rua das Flores, 123 - Centro<br>
+                                        Luanda, Angola
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-clock text-orange-400 mt-1"></i>
+                                    <div>
+                                        <strong>Horário de Funcionamento:</strong><br>
+                                        Segunda a Sexta: 8h - 22h<br>
+                                        Sábado: 9h - 23h<br>
+                                        Domingo: 9h - 21h
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-phone text-orange-400 mt-1"></i>
+                                    <div>
+                                        <strong>Contato:</strong><br>
+                                        +244 900 000 000<br>
+                                        +244 222 000 000
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-parking text-orange-400 mt-1"></i>
+                                    <div>
+                                        <strong>Estacionamento:</strong><br>
+                                        Estacionamento gratuito disponível para clientes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://wa.me/244900000000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Reservar mesa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="800" class="relative">
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15770.740206395787!2d13.225252426235365!3d-8.815629300230386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f15cdc8d2c7d%3A0x850c1c5c5ecc5a92!2sLuanda!5e0!3m2!1spt-PT!2sao!4v1771549050746!5m2!1spt-PT!2sao" 
+                                width="100%" 
+                                height="400" 
+                                class="rounded-lg" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa mostrando a localização do Flavor & Coffee em Luanda">
+                            </iframe>
+                            <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Aberto Agora
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-playfair text-orange-400">Flavor & Coffee</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Café artesanal de alta qualidade, preparado com paixão para oferecer experiências únicas e momentos inesquecíveis.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/244900000000" class="text-gray-400 hover:text-orange-400 transition-colors" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Horário</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-400"></i>
+                            Segunda a Sexta: 8h - 22h
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-400"></i>
+                            Sábado: 9h - 23h
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-400"></i>
+                            Domingo: 9h - 21h
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone text-orange-400"></i>
+                            +244 900 000 000
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-orange-400"></i>
+                            contato@flavorcoffee.ao
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-orange-400"></i>
+                            Rua das Flores, 123 - Centro
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-400 transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-orange-400 transition-colors">Sobre</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-orange-400 transition-colors">Menu</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-orange-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2026 Flavor & Coffee. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 opacity-0 invisible" aria-label="Voltar ao topo da página">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
